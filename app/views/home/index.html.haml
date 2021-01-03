@@ -38,10 +38,7 @@
 
 = link_to root_path, class: 'btn btn-success' do
   .fa.fa-flag
-  Homepage
 
-:javascript
-
-  $( document ).ready(function() {
-      alert( "ready!" );
-  });
+= link_to courses_path, class: 'btn btn-success' do
+  .fa.fa-book
+  Course
