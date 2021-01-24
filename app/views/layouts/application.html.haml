@@ -2,6 +2,9 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Rubygems
     = csrf_meta_tags
     = csp_meta_tag
@@ -15,7 +18,7 @@
     %script{:crossorigin => "anonymous", :integrity => "sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl", :src => "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"}
   %body
     = render 'layouts/header'
-    %p.notice= notice
-    %p.alert= alert
-
-    = yield
+    = render 'layouts/messages'
+    .container
+      %p
+      = yield

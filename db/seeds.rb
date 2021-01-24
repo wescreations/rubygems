@@ -12,6 +12,6 @@ User.create!(email: 'b@gmail.com', password: 'test123*', password_confirmation: 
   Course.create! ([{
     title: Faker::Educator.course_name,
     description: Faker::TvShows::GameOfThrones.quote,
-    user: User.first
+    user_id: User.first.id
     }])
 end
