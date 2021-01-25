@@ -1,0 +1,10 @@
+.card
+  .card-header
+    .fa.fa-user
+    = user.email
+  .card-footer
+    signed up
+    = time_ago_in_words(user.created_at)
+    ago
+    .row
+    
